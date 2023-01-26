@@ -1,0 +1,709 @@
+/*
+Template Name: Gonft - NFT Marketplace Bootstrap Template
+Author: Askbootstrap
+Author URI: https://themeforest.net/user/askbootstrap
+Version: 0.1
+*/
+
+/*
+- Body
+- Homepage
+- Navbar
+- Custom Bootstrap
+- Explore page
+- Activity Page
+- Help Center Page
+- Authors Page
+- Auther Page
+- Footer
+- Single Artwork Page
+- Collection Page
+- Mobile Media
+*/
+
+:root {
+    --primary-color-fetita: #a4161a;
+    --bs-primary-rgb-fetita: 164, 22, 26;
+}
+
+/* Body */
+
+body {
+    font-family: "Radio Canada", sans-serif;
+    font-size: 13px;
+    background-color: #f0f2f5 !important;
+}
+.ch-50 {
+    height: 50px;
+}
+
+/* Homepage */
+.steps-item-icon {
+    font-size: 33px;
+    width: 65px;
+    height: 65px;
+    min-width: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.notification-drop {
+    width: 352px;
+}
+.notification-drop .img-fluid {
+    height: 42px;
+}
+.osahan-item-list .d-flex.justify-content-between {
+    align-items: center;
+}
+.like-btn a {
+    background: #ffebec;
+    color: #dc3545;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    line-height: 0px;
+    font-size: 13px;
+}
+.like-btn a:hover,
+.like-btn a:focus {
+    background: #dc3545;
+    color: #ffffff;
+}
+
+/* Navbar */
+.osahan-nav .navbar-brand img {
+    height: 40px;
+}
+.osahan-nav .navbar-nav .nav-item .nav-link {
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 24px 18px;
+    letter-spacing: 0.4px;
+    font-weight: 600;
+    color: rgb(252, 252, 252);
+}
+.dropdown-menu {
+    border-radius: 0.5rem;
+    padding: 5px;
+}
+.dropdown-item {
+    font-size: 13px;
+    padding: 8px 13px;
+    border-radius: 5px;
+}
+.top-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color-fetita);
+}
+.messages-btn
+    span.position-absolute.top-0.start-100.translate-middle.badge.rounded-pill {
+    min-width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 0px;
+    border-radius: 5px !important;
+    color: #000;
+}
+.svg-border-rounded svg {
+    height: 3rem;
+    width: 100%;
+}
+
+/* Custom Bootstrap */
+.border-radius-five {
+    border-radius: 0.5rem;
+}
+.btn {
+    font-size: 14px;
+    min-height: 45px;
+    padding: 12px 16px;
+    text-transform: uppercase;
+    font-weight: 500 !important;
+    letter-spacing: 0.5px;
+    border-radius: 0.5rem;
+}
+.btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+.btn-sm {
+    font-size: 13px;
+    padding: 9px 22px;
+    min-height: 40px !important;
+}
+.btn-lg {
+    padding: 15px 40px;
+    font-size: 15px;
+}
+.form-control {
+    font-size: 14px;
+    min-height: 45px;
+    padding: 8px 16px;
+    border-radius: 0.5rem;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.form-control-sm {
+    font-size: 13px;
+    min-height: 4px;
+    padding: 9px 15px;
+    border-radius: 0.5rem;
+}
+.form-select {
+    font-size: 14px;
+    min-height: 45px;
+    padding: 8px 16px;
+    border-radius: 0.5rem;
+}
+.footer-mid img.img-fluid {
+    height: 35px;
+}
+.slick-track .slick-slide {
+    margin: 6px 8px;
+}
+.slick-list {
+    margin: 0 -8px;
+}
+.shadow-osahan {
+    -webkit-box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+    box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+}
+.rounded {
+    border-radius: 15px !important;
+}
+.card-img,
+.card-img-top {
+    border-top-left-radius: 9px !important;
+    border-top-right-radius: 9px !important;
+}
+.card-img-top.rounded-lg {
+    border-radius: 9px !important;
+}
+.card-img-top.rounded-0 {
+    border-radius: 9px !important;
+}
+#links li a {
+    color: #000;
+    font-weight: 500;
+    font-size: 18px;
+}
+#links li ul li a {
+    color: rgb(105, 105, 105);
+    font-size: 16px;
+}
+#links li a:hover {
+    color: rgb(105, 105, 105);
+}
+#links li ul li a:hover {
+    color: #000;
+}
+.my-dropdown-toggle::after {
+    content: none;
+}
+.background-image {
+    background-image: linear-gradient(
+            to bottom,
+            rgba(44, 45, 48, 0.52),
+            rgb(14, 14, 14) 112.6%
+        ),
+        url("@/img/fetita.jpeg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.top-artistss .card-img-top {
+    height: 125px;
+    object-fit: cover;
+}
+.profile {
+    width: 65px;
+    margin-top: -33px;
+    border: 4px solid white;
+    position: relative;
+}
+.onlinetick {
+    position: absolute;
+    top: 120px;
+    right: 0;
+    font-size: 17px;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    width: 22px;
+    background: #fff;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50px;
+}
+.live-left-arrow {
+    position: absolute;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 99;
+    padding: 5px 10px;
+    border-radius: 100%;
+    background-color: #0e6dfd;
+    border: 1px solid rgb(14 109 253);
+    top: 45%;
+    left: -22px;
+    color: #fff;
+    -webkit-box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+    box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+}
+.live-right-arrow {
+    position: absolute;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 99;
+    padding: 5px 10px;
+    border-radius: 100%;
+    background-color: #0e6dfd;
+    border: 1px solid rgb(14 109 253);
+    top: 45%;
+    right: -22px;
+    color: #fff;
+    -webkit-box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+    box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+}
+
+/* Explore Page */
+.explore-tabs button {
+    border: none;
+    color: #0d6efd;
+    border-radius: 8px;
+    font-size: 13px;
+    background: #e8f1ff;
+}
+.explore-tabs button:hover {
+    background: #0d6efd;
+    color: #fff;
+}
+.explore-tabs button.active {
+    background: #0d6efd;
+    color: #fff;
+}
+
+/* Activity Page */
+.activity-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+.activity-card a > div:hover {
+    background-color: rgb(243, 243, 243);
+}
+.activity-card-item .img-fluid {
+    height: 90px;
+    border-radius: 14px;
+    width: 90px;
+}
+.activity-card-item {
+    position: relative;
+}
+.activity-card-item .position-absolute {
+    font-size: 12px;
+    width: 28px;
+    height: 28px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid;
+    margin: 18px 19px;
+    border-radius: 10px !important;
+}
+@media (min-width: 480px) {
+    .help-tabs button {
+        padding: 35px;
+    }
+}
+@media (min-width: 780px) {
+    .help-tabs button {
+        padding: 30px;
+        margin: 0 5px;
+    }
+}
+@media (min-width: 1280px) {
+    .help-tabs button {
+        padding: 35px;
+        min-width: 204px;
+    }
+}
+
+/* Help Center Page */
+.help-tabs button {
+    border: none;
+    border-radius: 10px;
+    margin: 7px;
+    color: rgb(105, 105, 105);
+    background-color: #fff;
+    padding: 50px;
+}
+.help-tabs button:hover {
+    color: #000;
+}
+.help-tabs button.active {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+/* Authors Page */
+.authors-card-list .card-img-top {
+    height: 170px;
+    object-fit: cover;
+    padding: 6px;
+    border-radius: 16px !important;
+}
+.authors-card-list .rounded-circle {
+    height: 60px;
+    margin: -45px 0 0 0;
+    position: absolute;
+    right: 25px;
+}
+.top-artistss {
+    position: relative;
+}
+
+/* Auther Page */
+.auther-tabs button {
+    border: none;
+    color: #0d6efd;
+    border-radius: 8px;
+    font-size: 13px;
+    background: #fff;
+    -webkit-box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+    box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+}
+.auther-tabs button:hover {
+    background: #0d6efd;
+    color: #fff;
+}
+.auther-tabs button.active {
+    background: #0d6efd;
+    color: #fff;
+}
+.auther-tabs button span {
+    font-weight: 500;
+    margin: 0px 0px 0px 11px;
+    font-size: 12px;
+    color: #999ea4 !important;
+}
+.auther-tabs button.active span,
+.auther-tabs button:hover span {
+    color: #f6c244 !important;
+}
+.followers-items .img-fluid {
+    height: 47px;
+}
+.btn-icon {
+    font-size: 14px;
+    padding: 0px;
+    width: 40px;
+    height: 40px;
+    min-height: 40px !important;
+    display: flex;
+    color: #0d6efd;
+    align-items: center;
+    justify-content: center;
+}
+.author-sidebar .card-body.text-center img {
+    height: 160px;
+    margin: -122px 0 0 0;
+}
+.feature {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    font-size: 1.5rem;
+}
+
+/* Footer */
+footer.footer h6.fw-bold {
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+footer.footer .nav-link {
+    padding: 6px 0;
+    color: #798187;
+    font-size: 13px;
+}
+footer.footer .nav-link:hover,
+footer.footer .nav-link:focus {
+    color: #0e6dfd;
+}
+footer.footer img.img-fluid {
+    height: 45px;
+}
+
+/* Single Artwork Page */
+.osahan-item-list .card-header .img-fluid {
+    height: 39px;
+}
+.osahan-item-list .card-header .small.fw-bold {
+    font-size: 14px;
+    font-weight: 500 !important;
+    padding-left: 6px;
+}
+.osahan-item-list img.card-img-top.rounded-lg {
+    height: 240px;
+    object-fit: cover;
+}
+.sidebar-fix {
+    position: sticky;
+    top: 30px;
+}
+
+/* Collection Page */
+.collection-btn .img-fluid {
+    height: 32px;
+    margin-bottom: 5px;
+}
+.collection-btn .btn {
+    padding: 6px 0 12px 15px;
+    min-width: 120px;
+}
+.coll-page .d-flex.gap-2 .card-img-top {
+    height: 106px;
+    width: 31.3%;
+    object-fit: cover;
+}
+.rounded-start {
+    border-bottom-left-radius: 9px !important;
+    border-top-left-radius: 9px !important;
+}
+.rounded-end {
+    border-top-right-radius: 9px !important;
+    border-bottom-right-radius: 9px !important;
+}
+
+/* Mobile Media */
+@media (max-width: 576px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 992px) {
+    .navbar-toggler {
+        padding: 2px 5px;
+        background: #212529;
+    }
+    .osahan-nav .navbar-nav.me-auto .nav-item .nav-link {
+        padding: 11px 18px;
+        text-align: center;
+    }
+    .steps-item {
+        display: block !important;
+        text-align: center;
+        padding: 0px !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+    .steps-item-icon {
+        margin: auto;
+        background: #212529 !important;
+    }
+    .steps-item .fw-bold.fs-6.mb-1 {
+        margin: 12px 0 0 0;
+        font-size: 13px !important;
+        color: #fff;
+        font-weight: 400 !important;
+    }
+    footer.footer.bg-white.py-5 h6.fw-bold {
+        margin-top: 39px !important;
+    }
+    .filter-nav-page .row.justify-content-between.align-items-center {
+        display: block;
+        width: 100%;
+        margin: 0px;
+    }
+
+    .filter-nav-page .row.justify-content-between.align-items-center .col-2 {
+        width: 100%;
+        padding: 0px;
+    }
+
+    .filter-nav-page .row.justify-content-between.align-items-center .col-6 {
+        width: 100%;
+        padding: 9px 0px !important;
+        border-top: 1px solid #e2e4e6;
+        border-bottom: 1px solid #e2e4e6;
+    }
+    .osahan-nav .navbar-nav.ms-auto.gap-3 li.nav-item.dropdown {
+        display: none;
+    }
+    .help-tabs button {
+        padding: 24px;
+        min-width: 168px;
+    }
+    .collection-btn .btn {
+        padding: 6px 0 12px 15px;
+        min-width: auto;
+    }
+    .author-sidebar .card-body.text-center img {
+        height: 160px;
+        margin: 0px;
+    }
+}
+@media (min-width: 1200px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 100%;
+    }
+}
+@media (min-width: 1400px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1260px;
+    }
+}
+
+.btn-primary-fetita {
+    background-color: var(--primary-color-fetita);
+    color: #ffffff;
+    border: var(--primary-color-fetita);
+}
+
+.btn-primary-fetita:hover {
+    background-color: #ffffff;
+    color: #000;
+    border: #ffffff;
+}
+
+.bg-primary {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-primary-rgb-fetita)) !important;
+}
+
+.card-custom {
+    overflow: hidden;
+    min-height: 225px;
+    box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+}
+
+.card-custom-img {
+    height: 115px;
+    min-height: 115px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-color: inherit;
+}
+
+/* First border-left-width setting is a fallback */
+.card-custom-img::after {
+    position: absolute;
+    content: "";
+    top: 90px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-top-width: 40px;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 545px;
+    border-left-width: calc(575px - 5vw);
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: inherit;
+}
+
+.card-custom-avatar {
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+    position: absolute;
+    top: 60px;
+    left: 1rem;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.card-custom-avatar img {
+    width: 40px;
+    height: 40px;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.title-section {
+    font-size: 18px;
+}
+
+.avatar-menu {
+    width: 25px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    margin-right: 3px;
+}
+
+.banner-fetita {
+    background-image: linear-gradient(
+            to bottom,
+            rgba(44, 45, 48, 0.52),
+            rgb(14, 14, 14) 112.6%
+        ),
+        url("@/img/bondage-banner.jpeg");
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0 150px 0;
+}
+
+.card-fantasy-description {
+    margin-top: -75px;
+}
+
+.card-effect {
+    transition: all 0.3s ease;
+}
+.card-effect:hover {
+    padding-bottom: 10px;
+}
+
+.card-custom-category-avatar {
+    width: 65px;
+    margin-top: -50px;
+    margin-left: -5px;
+    border-radius: 30%;
+    box-shadow: 0 0 15px rgb(10 10 10 / 30%);
+    position: absolute;
+    left: 1rem;
+    background-color: #ffffff;
+    padding: 12px;
+}
+
+.card-img-top.card-category {
+    height: 165px;
+    object-fit: fill;
+}
