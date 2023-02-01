@@ -28,7 +28,7 @@
                     <div class="rounded shadow-sm p-4 bg-white d-flex align-items-center gap-3 steps-item">
                       <span class="bg-primary rounded-circle steps-item-icon"><i class="bi bi-patch-plus text-white"></i></span>
                       <div>
-                          <div class="fw-bold fs-6 mb-1">Minhas Comunidades</div>
+                          <div class="fw-bold fs-6 mb-1">Comunidades</div>
                           <div class="text-muted m-0 d-none d-md-block">Upload your NFTs and set a title, description and price.</div>
                       </div>
                     </div>
@@ -72,14 +72,14 @@
         </div>
     </section>
     <!-- Banner -->
-    <section class="bg-dark py-4">
+    <section class="bg-banner py-4">
           <div class="container py-4">
           <div class="row justify-content-center">
             <div class="col-xl-6 col-lg-7 col-md-8 col-12">
                 <div class="text-center py-4">
-                <small class="text-white-50">ACTIVITY</small>
-                <h1 class="fw-bold text-white py-3">We make sure that everyone is able to use a Gonft</h1>
-                <a href="activity.html" class="btn btn-light btn-lg"> More Info </a>
+                <small class="text-white">Planos Fetita</small>
+                <h1 class="fw-bold text-white py-3">Apareça em destaque no maior portal de Fetish</h1>
+                <a href="activity.html" class="btn btn-light btn-lg"> Ver Vantagens </a>
                 </div>
             </div>
           </div>
@@ -87,33 +87,45 @@
     </section>
     <!-- Categorias -->
     <section >
-      <div class="container my-4">
-                    <div class="h4 m-0 fw-bold title-section">Categorias</div>
-            <p class="pb-2">teste</p>
+      <div class="container my-4 py-5">
+        <div class="h4 m-0 fw-bold title-section">Categorias</div>
+          <p class="pb-2">teste</p>
         <div class="row">
           <div class="col-3">
               <div class="card">
                   <img class="card-img-top" src="@/img/sugar_daddy.jpeg" alt="Card image cap">
                   <div class="card-body">
-                      <h5 class="card-title">Sugar Daddy/Mommy</h5>
+                      <h5 class="card-title">Sugar</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   </div>
               </div>
           </div>
             <div class="col-3">
-              <div class="card">
+               <router-link to="/comunidades/bdsm" class="router-card-link">
+                            <div class="card" >
                   <img class="card-img-top" src="@/img/bondage-banner.jpeg" alt="Card image cap">
                   <div class="card-body">
                       <h5 class="card-title">BDSM</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   </div>
               </div>
+              </router-link>
+
           </div>
           <div class="col-3">
               <div class="card">
                   <img class="card-img-top" src="@/img/fantasia_cuckold.jpeg" alt="Card image cap">
                   <div class="card-body">
                       <h5 class="card-title">Cuckold</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-3">
+              <div class="card">
+                  <img class="card-img-top" src="@/img/foot_fetish.jpeg" alt="Card image cap">
+                  <div class="card-body">
+                      <h5 class="card-title">Podolatria</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   </div>
               </div>

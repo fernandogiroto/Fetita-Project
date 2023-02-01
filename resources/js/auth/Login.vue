@@ -51,13 +51,48 @@
             </div>
             <div class="navbar-nav ms-auto gap-3">
 <a class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cadastrar</a>
-<a class="btn btn-primary-fetita btn-sm" href="create.html">Fazer Login</a>
+<a class="btn btn-primary-fetita btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">Fazer Login</a>
 </div>
         </div>
     </nav>
-        <section class="background-image bg-primary py-5">
+    <section class="background-image bg-primary py-5">
           <div class="container py-4 teste">
-              
+
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-body">
+                       <form action="javascript:void(0)" class="row" method="post">
+                            <div class="col-12" v-if="Object.keys(validationErrors).length > 0">
+                                <div class="alert alert-danger">
+                                    <ul class="mb-0">
+                                        <li v-for="(value, key) in validationErrors" :key="key">{{ value[0] }}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-group col-12">
+                                <label for="email" class="font-weight-bold">Email</label>
+                                <input type="text" v-model="auth.email" name="email" id="email" class="form-control">
+                            </div>
+                            <div class="form-group col-12 my-2">
+                                <label for="password" class="font-weight-bold">Password</label>
+                                <input type="password" v-model="auth.password" name="password" id="password" class="form-control">
+                            </div>
+                            <div class="col-12 mb-2">
+                                <button type="submit" :disabled="processing" @click="login" class="btn btn-primary btn-block" data-bs-dismiss="modal" aria-label="Close">
+                                    {{ processing ? "Please wait" : "Login" }}
+                                </button>
+                            </div>
+                            <div class="col-12 text-center">
+                                <label>Don't have an account? <router-link :to="{name:'register'}">Register Now!</router-link></label>
+                            </div>
+                        </form>
+                    </div>
+                    </div>
+                </div>
+                </div>
               <div class="row">
                 <div class="col-lg-7 col-12">
                     <div class="mb-4">
@@ -66,7 +101,7 @@
                     </div>
                     <div>
                       <a href="explore.html" class="btn btn-primary-fetita btn-lg me-3">Fantasias</a>
-                      <a href="create.html" class="btn btn-light btn-lg">Regras</a>
+                      <a href="create.html" class="btn btn-light btn-lg">Comunidades</a>
                     </div>
                 </div>
               </div>
@@ -92,46 +127,20 @@
     <div class="container h-100">
         <div class="row h-100 align-items-center">
             <div class="col-12 col-md-6 offset-md-3">
-                <div class="card shadow sm">
-                    <div class="card-body">
-                        <h1 class="text-center">Login</h1>
-                        <hr/>
-                        <form action="javascript:void(0)" class="row" method="post">
-                            <div class="col-12" v-if="Object.keys(validationErrors).length > 0">
-                                <div class="alert alert-danger">
-                                    <ul class="mb-0">
-                                        <li v-for="(value, key) in validationErrors" :key="key">{{ value[0] }}</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="form-group col-12">
-                                <label for="email" class="font-weight-bold">Email</label>
-                                <input type="text" v-model="auth.email" name="email" id="email" class="form-control">
-                            </div>
-                            <div class="form-group col-12 my-2">
-                                <label for="password" class="font-weight-bold">Password</label>
-                                <input type="password" v-model="auth.password" name="password" id="password" class="form-control">
-                            </div>
-                            <div class="col-12 mb-2">
-                                <button type="submit" :disabled="processing" @click="login" class="btn btn-primary btn-block">
-                                    {{ processing ? "Please wait" : "Login" }}
-                                </button>
-                            </div>
-                            <div class="col-12 text-center">
-                                <label>Don't have an account? <router-link :to="{name:'register'}">Register Now!</router-link></label>
-                            </div>
-                        </form>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
+    <Footer />
+
 </template>
 
 <script>
 import { mapActions } from 'vuex'
+import Footer from '@/layouts/Footer.vue'
+
 export default {
     name:"login",
+    components: { Footer},
     data(){
         return {
             auth:{

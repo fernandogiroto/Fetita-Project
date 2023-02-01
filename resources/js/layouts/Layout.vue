@@ -6,13 +6,12 @@
    </div>
 </template>
 <script>
-import {mapActions} from 'vuex'
-import { RouterLink, RouterView } from 'vue-router'
+
 import Navbar from '@/layouts/Navbar.vue'
 import Footer from '@/layouts/Footer.vue'
 
 export default {
-    name:"default-layout",
+    name:"Layout",
     components: { Navbar,Footer},
     data(){
         return {

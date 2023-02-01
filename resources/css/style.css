@@ -703,7 +703,31 @@ footer.footer img.img-fluid {
     padding: 12px;
 }
 
-.card-img-top.card-category {
+.card-img-top {
     height: 165px;
     object-fit: fill;
+}
+
+
+.comunity-avatar {
+    width: 60px;
+    height: 60px;
+}
+
+.router-card-link{
+    color: #000;
+    text-decoration: none;
+}
+
+.bg-banner{
+    background-image: linear-gradient(
+        to bottom,
+        rgba(44, 45, 48, 0.52),
+        rgb(14, 14, 14) 112.6%
+    ),
+    url("@/img/fetita_bondage.jpeg");
+background-size: cover;
+background-position: bottom;
+padding: 150px 0 150px 0;
+    
 }

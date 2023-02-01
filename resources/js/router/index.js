@@ -6,7 +6,7 @@ const Login = () => import('@/auth/Login.vue')
 const Register = () => import('@/auth/Register.vue')
 
 /* Layouts */
-const Default = () => import('@/layouts/Default.vue')
+const Layout = () => import('@/layouts/Layout.vue')
 
 /* Authenticated Component */
 const Dashboard = () => import('@/pages/Dashboard.vue')
@@ -14,12 +14,14 @@ const Users = () => import('@/pages/UsersView.vue')
 const Bdsm = () => import('@/pages/Bdsm.vue')
 const Anuncios = () => import('@/pages/Anuncios.vue')
 
+const PoliticaPrivacidade = () => import('@/pages/PoliticaPrivacidade.vue')
+
 
 
 const routes = [
     {
         name: "login",
-        path: "/login",
+        path: "/",
         component: Login,
         meta: {
             middleware: "guest",
@@ -37,7 +39,7 @@ const routes = [
     },
     {
         path: "/",
-        component: Default,
+        component: Layout,
         meta: {
             middleware: "auth"
         },
@@ -68,10 +70,19 @@ const routes = [
             },
             {
                 name: 'bdsm',
-                path: '/fantasias/bdsm',
+                path: '/comunidades/bdsm',
                 component: Bdsm,
                 meta: {
-                    title: `BDSM`
+                    title: `BDSM`,
+                    transition: 'slide-left'
+                }
+            },
+            {
+                name: 'politica_de_privacidade',
+                path: '/politica_de_privacidade',
+                component: PoliticaPrivacidade,
+                meta: {
+                    title: `Política de Privacidade`
                 }
             },
         ]
@@ -81,6 +92,16 @@ const routes = [
 const router = createRouter({
     history: createWebHistory(),
     routes,
+    scrollBehavior(to, from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition;
+        } else {
+            return { top: 0 }
+        }
+
+    }
+
+
 })
 
 router.beforeEach((to, from, next) => {
