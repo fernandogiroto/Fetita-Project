@@ -2,30 +2,30 @@ import { createWebHistory, createRouter } from 'vue-router'
 import store from '@/store'
 
 /* Guest Component */
-const Login = () => import('@/auth/Login.vue')
-const Register = () => import('@/auth/Register.vue')
+const Login = () => import('@/pages/auth/Login.vue')
+const Register = () => import('@/pages/auth/Register.vue')
 
 /* Layouts */
-const Layout = () => import('@/layouts/Layout.vue')
+const Default = () => import('@/layouts/Default.vue')
 
 /* Authenticated Component */
 const Dashboard = () => import('@/pages/Dashboard.vue')
-const Users = () => import('@/pages/UsersView.vue')
+const Users = () => import('@/pages/Users.vue')
+const User = () => import('@/pages/User.vue')
+const Profile = () => import('@/pages/Profile.vue')
 const Bdsm = () => import('@/pages/Bdsm.vue')
 const Anuncios = () => import('@/pages/Anuncios.vue')
 
 const PoliticaPrivacidade = () => import('@/pages/PoliticaPrivacidade.vue')
 
-
-
 const routes = [
     {
         name: "login",
-        path: "/",
+        path: "/login",
         component: Login,
         meta: {
             middleware: "guest",
-            title: `Login`,
+            title: `Maior Portal do Fetish`,
         }
     },
     {
@@ -39,7 +39,7 @@ const routes = [
     },
     {
         path: "/",
-        component: Layout,
+        component: Default,
         meta: {
             middleware: "auth"
         },
@@ -49,7 +49,7 @@ const routes = [
                 path: '/',
                 component: Dashboard,
                 meta: {
-                    title: `Dashboard`
+                    title: `Maior Portal do Fetish`
                 }
             },
             {
@@ -58,6 +58,23 @@ const routes = [
                 component: Users,
                 meta: {
                     title: `Usuarios`
+                }
+            },
+            {
+                name: 'user',
+                path: '/usuario/:id',
+                props: true,
+                component: User,
+                meta: {
+                    title: `Maior Portal do Fetish`
+                }
+            },
+            {
+                name: 'profile',
+                path: '/profile',
+                component: Profile,
+                meta: {
+                    title: `Profile`
                 }
             },
             {
@@ -100,12 +117,10 @@ const router = createRouter({
         }
 
     }
-
-
 })
 
 router.beforeEach((to, from, next) => {
-    document.title = to.meta.title
+    document.title = `Fetita | ${to.meta.title}`;
     if (to.meta.middleware == "guest") {
         if (store.state.auth.authenticated) {
             next({ name: "dashboard" })
@@ -119,5 +134,4 @@ router.beforeEach((to, from, next) => {
         }
     }
 })
-
-export default router
+export default router;

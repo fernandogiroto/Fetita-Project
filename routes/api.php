@@ -24,3 +24,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/users', function (Request $request) {
     return User::all();
 });
+
+
+
+
+Route::get('/profile/{id}', [App\Http\Controllers\ProfileController::class, 'profile']);
+Route::put('/user/community/bdsm_add/{id}', [App\Http\Controllers\CommunitiesController::class, 'bdsm_add']);
+Route::put('/user/community/bdsm_remove/{id}', [App\Http\Controllers\CommunitiesController::class, 'bdsm_remove']);

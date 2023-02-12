@@ -1,21 +1,8 @@
 <template>
-  <div>
-    <section class="pt-5 bg-dark">
-         <div class="container py-4 px-5 text-center">
-            <div class="row gx-5 justify-content-center">
-               <div class="col-lg-8">
-                  <h1 class="text-white display-5 mb-2 fw-bold">Usuários</h1>
-                  <p class="lead text-white-50 m-0">Lorem ipsum dolor sit amet.</p>
-               </div>
-            </div>
-         </div>
-         <div class="svg-border-rounded text-light">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="#f0f2f5">
-               <path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path>
-            </svg>
-         </div>
-      </section>
-            <section class="py-5">
+   <!-- Banner -->
+   <Banner title="Usuários" subtitle="Lorem ipsum dolor sit amet." />
+   <!-- Users -->
+   <section class="py-5">
          <div class="container py-4">
             <div class="row">
                <div class="col-lg-3 d-none d-sm-block">
@@ -66,18 +53,18 @@
                </div>
                <div class="col-lg-9 col-12">
                   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                     <!-- 1st card -->
-                     <div class="col">
+                     <!-- Users List -->
+                     <div class="col" v-for="user in users" :key="user.id">
                         <div class="card osahan-item-list p-3 rounded h-100 shadow-osahan bg-white border-0">
                            <img src="https://picsum.photos/seed/picsum/200/300" class="card-img-top rounded-lg" alt="...">
                            <div class="card-body fw-bold px-0 pb-0">
                               <div class="d-flex justify-content-between">
                                  <div class="d-flex gap-2 align-items-center">
-                                    <h5 class="card-title mb-1">Metaverse Gamesmall</h5>
+                                    <h5 class="card-title mb-1">{{user.name + ' ' + user.lastname}}</h5>
                                  </div>
                                  <div class="like-btn"><a href="#" class="text-decoration-none link-dark"><i class="bi bi-heart-fill"></i></a></div>
                               </div>
-                              <div class="card-text mb-1"><small class="text-muted">Highest bid</small>
+                              <div class="card-text mb-1"><small class="text-muted">{{user.username}}</small>
                               </div>
                               <div class="text-danger">Bid 2.079 ETH</div>
                            </div>
@@ -85,30 +72,32 @@
                         </div>
                      </div>
                   </div>
-                  <div class="row">
-                     <div class="col-12">
-                        <!-- Load more button -->
-                        <div class="d-flex justify-content-center mt-5">
-                           <a href="#" class="btn btn-outline-primary btn-lg">Lord more artwork</a>
-                        </div>
-                     </div>
-                  </div>
                </div>
             </div>
          </div>
-      </section>
-      <section class="bg-primary py-4">
-         <div class="container py-4">
-            <div class="row justify-content-center">
-               <div class="col-xl-6 col-lg-7 col-md-8 col-12">
-                  <div class="text-center py-4">
-                     <small class="text-white-50">ACTIVITY</small>
-                     <h1 class="fw-bold text-white py-3">We make sure that everyone is able to use a Gonft</h1>
-                     <a href="activity.html" class="btn btn-light btn-lg"> More Info </a>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-  </div>
+   </section>
+  <!-- Call to Action -->
+  <CallAction title="Apareça em destaque no maior portal de Fetish" subtitle="Planos Fetita" btn_color="btn-light" btn_link="#" btn_text="Ver Planos" />
 </template>
+<script>
+   import CallAction from '@/components/CallAction.vue'
+   import Banner from '@/components/Banner.vue'
+   export default {
+      
+      name:"users",
+      components: {CallAction,Banner},
+      data(){
+         return{
+            users:[]
+         }
+      },
+      async mounted(){
+         try{
+            const {data} = await axios.get('api/users')
+            this.users = data;
+         }catch(error){
+            console.log(error);
+         }
+      },
+   }
+</script>

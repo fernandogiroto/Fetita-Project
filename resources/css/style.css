@@ -224,6 +224,18 @@ body {
     display: flex;
     align-items: center;
 }
+.background-image-login {
+    background-image: linear-gradient(
+            to bottom,
+            rgba(44, 45, 48, 0.52),
+            rgb(14, 14, 14) 112.6%
+        ),
+        url("@/img/fetita_bondage.jpeg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
 
 .top-artistss .card-img-top {
     height: 125px;
@@ -354,7 +366,7 @@ body {
     margin: 7px;
     color: rgb(105, 105, 105);
     background-color: #fff;
-    padding: 50px;
+    padding: 30px;
 }
 .help-tabs button:hover {
     color: #000;
@@ -681,7 +693,7 @@ footer.footer img.img-fluid {
 }
 
 .card-fantasy-description {
-    margin-top: -75px;
+    margin-top: -95px;
 }
 
 .card-effect {
@@ -730,4 +742,40 @@ background-size: cover;
 background-position: bottom;
 padding: 150px 0 150px 0;
     
+}
+
+.user-gallery {
+    height: 95px;
+    margin-right: 10px;
+}
+
+.user-profile {
+    height: 450px;
+}
+
+.user-gallery:last-child{
+    margin-right: 0;
+}
+
+.auther-tabs button.active {
+    background: #a4161a;
+    color: #fff;
+}
+
+.auther-tabs button {
+    color: #000000;
+}
+
+.auther-tabs button:hover {
+    background: #a4161a;
+    color: #fff;
+}
+
+.img-account-profile{
+    height: 300px;
+    width: 325px;
+}
+
+.dropdown-item:active {
+    background-color: #a4161a;
 }

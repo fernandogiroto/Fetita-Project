@@ -9,7 +9,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
-                        <router-link class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Comunidades</router-link >
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Comunidades</a>
                         <ul class="dropdown-menu border-0 shadow-sm">
                             <li><router-link to="/comunidades/bdsm" class="dropdown-item">BDSM</router-link></li>
                         </ul>
@@ -136,9 +136,9 @@
                                 </a>
                             </div>
                             <div>
-                                <a class="dropdown-item" href="author.html">
+                                <router-link class="dropdown-item" to="/profile">
                                     <i class="bi bi-pen me-2"></i> Editar Perfil
-                                </a>
+                                </router-link>
                             </div>
                             <div>
                                 <a class="dropdown-item text-danger pointer" @click="logout" role="button">
@@ -164,9 +164,9 @@ export default {
             }
         },
         methods:{
-        ...mapActions({
-            signOut:"auth/logout"
-        }),
+            ...mapActions({
+                signOut:"auth/logout"
+            }),
         async logout(){
             await axios.post('/logout').then(({data})=>{
                 this.signOut()
